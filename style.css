@@ -124,25 +124,23 @@
 .requisito{
     position: absolute;
     list-style: none;
-    top: -100%;
     width: 100%;
     height: 100%;
-    transition: all 500ms ease-in-out;
-    opacity: 0;
-    visibility: hidden;
+    top: 0;
+    padding: 10px;
+    opacity: 1;
+    /* top: -100%; */
+    /* transition: all 500ms ease-in-out; */
+    /* visibility: hidden; */
     /* z-index: 1000; */
     border-radius: 15px;
-    
-}
-
-.requirements:hover>.requisito{
-    top: 0px;
-    padding: 50px;
-    opacity: 1;
-    visibility: visible;
     background-color:rgb(32, 105, 167,0.5);
-    border-radius: 15px;
-
+}
+.requisito-canotaje{
+    padding: 40px;
+}
+.requisito-canopy{
+    padding: 5px;
 }
 
 .requisito li:first-child{
@@ -152,10 +150,6 @@
 /*=================articulo canopy=========*/
 .marco-canopy{
     margin-bottom: 30px;
-}
-
-.requirements:hover>.requisito{
-    padding: 30px;
 }
 
 .features{
@@ -181,6 +175,9 @@
 }
 .options-rappel{
     background-color: var(--color--pink-ligth);
+}
+.requisito-rappel{
+    padding: 25px;
 }
 /* ============ articulo precausiones==================== */
 .sub-title-suggestions{
@@ -235,6 +232,29 @@
 
 /*====================== tamaño desktop =============*/
 @media screen and (min-width:1024px){ 
+    .requirements img{
+        z-index: 50;
+    }
+    .requisito{
+        opacity: 0;
+        top: -100%;
+        transition: all 500ms ease-in-out;
+        visibility: hidden;
+        z-index: 1000;
+    }
+    .requirements:hover>.requisito{
+        top: 0px;
+        padding: 50px;
+        opacity: 1;
+        visibility: visible;
+        background-color:rgb(32, 105, 167,0.5);
+        border-radius: 15px;
+    }
+
+    .requirements:hover>.requisito{
+        padding: 30px;
+    }
+
     .adventure-sport{
         margin: 0;
     }
